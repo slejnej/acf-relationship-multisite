@@ -4,41 +4,29 @@ forked from 'naotone/acf-relationship-multisite', stripped to latest version onl
 **ACF 5.5.8**
 
 
-
-### IMPORTANT NOTICE
-
-**There are a lot requests and issus regarding the (pre-)selection of post types and/or taxonomies. But there's one main problem within WordPress: Post Types, especially CPTs, are registered for each individual site at run time. So there's no easy possibilty to grab post types and taxonomies from other sites.**
-
-**This plugin is no longer being developed! If anyone has the knowledge and time further developing the plugin, feel free to use the existing code.**
-
-# Advanced Custom Fields: Relationship Multisite
-
-Get post, pages and custom post types from another site of your WordPress Multisite installation.
-
-**This plugin needs the installation/activation of Advanced Custom Fields V5**
-
 ### Installation
 
-This add-on can be treated as both a WP plugin and a theme include.
+**Install as Plugin via composer**
 
-**Install as Plugin**
-
-1. Copy the 'acf-relationship-multisite' folder into your plugins folder
-2. Activate the plugin via the Plugins admin page
-
-**Include within theme**
-
-1.	Copy the 'acf-relationship-multisite' folder into your theme folder (can use sub folders). You can place the folder anywhere inside the 'wp-content' directory
-2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-date_time_picker.php file)
-
-```php
-add_action('acf/register_fields', 'my_register_fields');
-
-function my_register_fields()
-{
-	include_once('acf-relationship-multisite/acf-relationship-multisite.php');
-}
+1. add to composer.json
 ```
+"repositories": [
+   {
+      "type": "vcs",
+      "url": "https://github.com/slejnej/acf-relationship-multisite"
+   },
+   "require": {
+      "slejnej/acf-relationship-multisite": "*"
+   },
+   "extra": {
+       "installer-paths": {
+         "wordpress/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+         "wordpress/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+       }
+   }
+]
+```
+2. Activate the plugin via the Plugins admin page
 
 ### Description
 
