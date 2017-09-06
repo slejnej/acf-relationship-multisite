@@ -1,0 +1,8 @@
+{
+  "name": "slejnej/acf-relationship-multisite",
+  "type": "wordpress-plugin",
+  "require": {
+    "composer/installers": "^1.1.0",
+    "johnpbloch/wordpress": "~4"
+  }
+}

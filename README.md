@@ -1,3 +1,10 @@
+# Forked project and updated to be installed via composer
+forked from 'naotone/acf-relationship-multisite', stripped to latest version only and now installable through composer
+
+**ACF 5.5.8**
+
+
+
 ### IMPORTANT NOTICE
 
 **There are a lot requests and issus regarding the (pre-)selection of post types and/or taxonomies. But there's one main problem within WordPress: Post Types, especially CPTs, are registered for each individual site at run time. So there's no easy possibilty to grab post types and taxonomies from other sites.**
